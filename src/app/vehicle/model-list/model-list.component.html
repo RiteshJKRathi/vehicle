@@ -1,0 +1,62 @@
+
+<nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand"><i class="tim-icons icon-bus-front-12"></i>VehicleBar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collnavbar">
+                        <span class = "navbar-toggler-icon"></span>
+                        </button>
+                        <div class = "collapse navbar-collapse" id="collnavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="menu-item-list.html">Menu Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="signup.html">Signup</a>
+            </li>
+            
+          </ul>
+          </div>
+        </nav>
+      
+        <div class = "container-fluid">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+              <h1 id="search">Find Vehicle</h1>
+              <div class = "input-group">
+                <div class="input-group-prepend">
+                  <button class="input-group-button"><i class="tim-icons icon-zoom-split"></i></button>
+                </div>
+              <input class ="form-control" type="search" name="findfood" placeholder="Search Vehicle">
+              </div>
+            </div>
+          </div>
+      
+          <div class="row" >
+            
+            <div *ngFor="let vehicle of vehicleList" class="card-container col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-3"><div class= "card"><img class="card-img-top" src="{{vehicle.image}}"
+             alt="{{vehicle.name}}"> <div class="card-body">{{vehicle.name}}
+                 <p id="category">{{vehicle.vehicleType}}<br>{{ vehicle.branch}}<br>{{ vehicle.vehicleNumber}}</p>
+              <p><button type="button" class="btn" id="cartButton">  <i class="tim-icons icon-wallet-43" id="pen"></i>Reserve</button></p>
+            </div></div></div>
+      <!-- <table>
+        <tr>
+          <th align="left" width="200">Name</th>
+          <th width="100">Free Delivery</th>
+          <th align="right" width="100">Price</th>
+          <th width="125" align="right">Category</th>
+          <th width="100" align="right">Date of Launch</th>
+          <th width="100" align="right">Active</th>
+        </tr>
+        <tr *ngFor="let foodItem of foodItemList">
+          <td>{{foodItem.name}}</td>
+          <td>{{foodItem.freeDelivery}}</td>
+          <td align="right">{{foodItem.price}}</td>
+          <td align="right">{{foodItem.category}}</td>
+          <td align="right">{{foodItem.dateOfLaunch | date: 'dd/MM/yyyy'}}</td>
+          <td align="right">{{foodItem.active}}</td>
+        </tr>
+      </table> -->
+      
+      
